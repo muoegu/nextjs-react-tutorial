@@ -4,10 +4,10 @@ import { Title, NumberInput, Text } from "@mantine/core";
 import { useState } from "react";
 
 const GymClient = () => {
-    const [value, setValue] = useState<string | number>('1');
+    const [value, setValue] = useState<number>(1);
     const month_fee = 1299;
-    console.log(value);
     const per_day = month_fee / value / 2;
+    const price_JPY = per_day * 4.872;
 
     return (
         <>
@@ -19,6 +19,7 @@ const GymClient = () => {
             />
             <Text>Month Fee: {month_fee.toLocaleString()}</Text>
             <Text>Estimated price per day:{per_day}</Text>
+            <Text>JPY ≒ ￥{price_JPY}</Text>
         </>
     );
 }
