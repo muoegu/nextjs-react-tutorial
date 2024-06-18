@@ -4,7 +4,7 @@ import { Button } from '@mantine/core';
 function Demo() {
   return (
     <Button component={Link} href="/gym">
-      gym
+        Gym Calculater
     </Button>
   );
 }
