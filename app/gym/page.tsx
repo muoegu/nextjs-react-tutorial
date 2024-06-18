@@ -15,7 +15,7 @@ const GymClient = () => {
             <NumberInput
                 label="How many times did you go to the gym this month?"
                 value={value}
-                onChange={(val) => setValue(val)}
+                onChange={(val) => setValue(typeof val === 'number' ? val : 0)}
             />
             <Text>Month Fee: {month_fee.toLocaleString()}</Text>
             <Text>Estimated price per day:{per_day}</Text>
